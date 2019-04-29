@@ -1,0 +1,69 @@
+{
+  "name": "EpicSkills-start-kit",
+  "version": "1.0.0",
+  "description": "Start project.",
+  "scripts": {
+    "test": "stylelint \"src/**/*.scss\" --syntax=scss",
+    "lint-staged": "lint-staged",
+    "precommit": "lint-staged",
+    "start": "gulp"
+  },
+  "author": "MediaBay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MediaBayStudio/start-kit"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.14.0",
+    "del": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-gh-pages": "git+https://github.com/nicothin/gulp-gh-pages.git",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.2.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
+    "husky": "^2.1.0",
+    "imagemin-pngquant": "^5.0.0",
+    "lint-staged": "^8.1.5",
+    "mkdirp": "^0.5.1",
+    "postcss-object-fit-images": "^1.1.2",
+    "stylelint": "^10.0.1",
+    "ttf2woff": "^2.0.1",
+    "ttf2woff2": "^2.0.3"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+}
